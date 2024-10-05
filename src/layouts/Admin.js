@@ -46,6 +46,7 @@ const Admin = () => {
             position: "relative",
             width: "100%",
             padding: "12px",
+            margin: "10px",
           }}
         >
           <Grid2
