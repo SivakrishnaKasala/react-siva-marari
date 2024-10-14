@@ -11,6 +11,9 @@ import Institutions from "./views/admin/institutions/Institutions";
 import Login from "./views/auth/Login";
 import Register from "./views/auth/Register";
 import SettingsPage from "./views/admin/settings/SettingsPage";
+import Cart from "./pages/cart/Cart";
+import SelectTest from "./pages/checkout/SelectTest";
+import DeliveryTest from "./pages/checkout/DeliveryTest";
 
 export const routes = [
   {
@@ -65,5 +68,33 @@ export const routes = [
     component: <SettingsPage />,
     layout: "/admin",
     isMenuItem: false,
+  },
+  {
+    path: "cart",
+    name: "Cart",
+    component: <Cart />,
+    layout: "/admin",
+    isMenuItem: false,
+  },
+  {
+    path: "checkout",
+    name: "Checkout",
+    isSubEle: true,
+    layout: "/admin",
+    isMenuItem: false,
+    item: [
+      {
+        path: "select",
+        name: "Select",
+        layout: "/checkout",
+        component: <SelectTest />,
+      },
+      {
+        path: "delivery",
+        name: "Delivery",
+        layout: "/checkout",
+        component: <DeliveryTest />,
+      },
+    ],
   },
 ];
