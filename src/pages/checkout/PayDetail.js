@@ -111,7 +111,33 @@ const PayDetail = () => {
                     >
                       <FormControl fullWidth component={Box}>
                         <FormLabel>Email Address</FormLabel>
-                        <TextField />
+                        <TextField
+                          sx={{
+                            border: "1px solid #cacfd3",
+                            borderRadius: "6px",
+                            "& .MuiInputBase-root": {},
+                            "& .MuiOutlinedInput-root": {
+                              "& fieldset": {
+                                borderColor: "transparent",
+                              },
+                              "&:hover fieldset": {
+                                borderColor: "transparent",
+                              },
+                              "&.Mui-focused fieldset": {
+                                borderColor: "transparent",
+                              },
+                            },
+                            "& .MuiOutlinedInput-input": {
+                              padding: "12px",
+                            },
+                            height: "44px",
+                            fontSize: "16px",
+                            backgroundColor: "#fff",
+                            alignItems: "center",
+                            display: "flex",
+                            lineHeight: "125%",
+                          }}
+                        />
                       </FormControl>
                     </Grid>
                     <Grid
